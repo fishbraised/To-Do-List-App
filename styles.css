@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Bree+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #615756, #503d3f);
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 10px;
+  padding: 40px 30px 70px;
+  margin: 100px auto 20px;
+  background: #fff;
+}
+
+.todo-app h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #002765;
+}
+
+.todo-app img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  background: #edeef0;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: transparent;
+}
+
+button {
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  padding: 12px 50px;
+  color: #fff;
+  background: #ff5945;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background-image: url('https://res.cloudinary.com/dkoqbt4pc/image/upload/v1730030768/To-Do%20List%20App/unchecked.png');
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url('https://res.cloudinary.com/dkoqbt4pc/image/upload/v1730030769/To-Do%20List%20App/checked.png');
+}
+
+ul li span {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #555;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
